@@ -1,10 +1,20 @@
+'use client';
 import React from "react";
+import Navbar from "@/components/navbar";
+import SkinTile from "@/components/SkinTile";
+import { useState } from "react";
+import { Prisma } from "@prisma/client";
 
-const CollectionPage: React.FC = () => {
+async function CollectionPage(){
+    const [skins, setSkins] = useState();
     return(
-        <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="text-4xl font-bold mb-4">Collection Page</h1>
-            <p className="text-lg">Welcome to the Collection page!</p>
+        <div>
+            <Navbar></Navbar>
+            <h1>{}</h1>
+            const new= await fetch("https://api.example.com/skins");
+            <div className="flex items-center justify-center h-screen">
+                <SkinTile imageUrl="/Bravo/AK-47_Fire_Serpent.jpeg" name="AK-47 Fire Serpent" rarity={"Covert"} />
+            </div>
         </div>
     )
 }
