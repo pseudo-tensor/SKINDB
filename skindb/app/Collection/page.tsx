@@ -2,23 +2,14 @@ import React from "react";
 import Navbar from "@/components/navbar";
 import SkinTile from "@/components/SkinTile";
 import prisma from "@/lib/prisma";
+import Image from "next/image";
 
 async function CollectionPage(){
-    const data= await prisma.skin.findMany(
-        {
-            where:{
-                caseId:'1',
-            },
-        }
-    );
     return(
-        <div>
+        <div className="flex flex-col p-4 m-3">
             <Navbar></Navbar>
-            <div className="flex items-center justify-center h-screen m-3 p-4">
-                {data.map((skin) => (
-                    <SkinTile key={skin.id} imageUrl="/Bravo/AWP_Graphite.jpeg" name={skin.name} rarity={skin.rarity} />
-                ))}
-                <SkinTile imageUrl="/Bravo/AK-47_Fire_Serpent.jpeg" name="Fire Serpent" rarity={"Covert"} />
+            <div>
+                <Image src="/Case/CS:GO Weapon Case 2.jpeg" alt="Weapon Case 2" height={300} width={300} className="m-3 p-4"/>
             </div>
         </div>
     )

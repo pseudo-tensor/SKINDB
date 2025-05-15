@@ -3094,12 +3094,12 @@ export namespace Prisma {
   }
 
   export type casesCreateInput = {
-    id: string
+    id?: string
     name: string
   }
 
   export type casesUncheckedCreateInput = {
-    id: string
+    id?: string
     name: string
   }
 
@@ -3114,7 +3114,7 @@ export namespace Prisma {
   }
 
   export type casesCreateManyInput = {
-    id: string
+    id?: string
     name: string
   }
 
@@ -3129,7 +3129,7 @@ export namespace Prisma {
   }
 
   export type skinCreateInput = {
-    id: string
+    id?: string
     name: string
     rarity: string
     weapon: string
@@ -3137,7 +3137,7 @@ export namespace Prisma {
   }
 
   export type skinUncheckedCreateInput = {
-    id: string
+    id?: string
     name: string
     rarity: string
     weapon: string
@@ -3161,7 +3161,7 @@ export namespace Prisma {
   }
 
   export type skinCreateManyInput = {
-    id: string
+    id?: string
     name: string
     rarity: string
     weapon: string

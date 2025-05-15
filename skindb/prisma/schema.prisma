@@ -9,12 +9,12 @@ datasource db {
 }
 
 model cases {
-  id   String @id(map: "Case_pkey")
+  id   String @id(map: "Case_pkey") @default(cuid())
   name String
 }
 
 model skin {
-  id     String  @id(map: "Skin_pkey")
+  id     String  @id(map: "Skin_pkey") @default(cuid())
   name   String
   rarity String
   weapon String
