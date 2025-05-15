@@ -1,15 +1,28 @@
 import React from "react";
 import Navbar from "@/components/navbar";
-import SkinTile from "@/components/SkinTile";
 import prisma from "@/lib/prisma";
-import Image from "next/image";
+import CaseTile from "@/components/CaseTile";
+import Link from "next/link";
 
 async function CollectionPage(){
+    const cases=await prisma.cases.findMany({
+        where:{
+            id:{
+                in:["1","2","3","4","5"]
+            }
+        }
+    });
     return(
-        <div className="flex flex-col p-4 m-3">
+        <div>
             <Navbar></Navbar>
-            <div>
-                <Image src="/Case/CS:GO Weapon Case 2.jpeg" alt="Weapon Case 2" height={300} width={300} className="m-3 p-4"/>
+            <div className="grid grid-cols-4 gap-1">
+                <Link href="/Bravo">
+                    {cases.map((caseItem) => (
+                        <div className="flex m-3 p-4">
+                            <CaseTile imageUrl={`/Case/${caseItem.name}.jpeg`} name={caseItem.name} />
+                        </div>
+                    ))}
+                </Link>
             </div>
         </div>
     )
