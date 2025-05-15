@@ -1,19 +1,24 @@
-'use client';
 import React from "react";
 import Navbar from "@/components/navbar";
 import SkinTile from "@/components/SkinTile";
-import { useState } from "react";
-import { Prisma } from "@prisma/client";
+import prisma from "@/lib/prisma";
 
 async function CollectionPage(){
-    const [skins, setSkins] = useState();
+    const data= await prisma.skin.findMany(
+        {
+            where:{
+                caseId:'1',
+            },
+        }
+    );
     return(
         <div>
             <Navbar></Navbar>
-            <h1>{}</h1>
-            const new= await fetch("https://api.example.com/skins");
-            <div className="flex items-center justify-center h-screen">
-                <SkinTile imageUrl="/Bravo/AK-47_Fire_Serpent.jpeg" name="AK-47 Fire Serpent" rarity={"Covert"} />
+            <div className="flex items-center justify-center h-screen m-3 p-4">
+                {data.map((skin) => (
+                    <SkinTile key={skin.id} imageUrl="/Bravo/AWP_Graphite.jpeg" name={skin.name} rarity={skin.rarity} />
+                ))}
+                <SkinTile imageUrl="/Bravo/AK-47_Fire_Serpent.jpeg" name="Fire Serpent" rarity={"Covert"} />
             </div>
         </div>
     )

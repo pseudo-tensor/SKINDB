@@ -14,15 +14,15 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Case
+ * Model cases
  * 
  */
-export type Case = $Result.DefaultSelection<Prisma.$CasePayload>
+export type cases = $Result.DefaultSelection<Prisma.$casesPayload>
 /**
- * Model Skin
+ * Model skin
  * 
  */
-export type Skin = $Result.DefaultSelection<Prisma.$SkinPayload>
+export type skin = $Result.DefaultSelection<Prisma.$skinPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -32,7 +32,7 @@ export type Skin = $Result.DefaultSelection<Prisma.$SkinPayload>
  * ```
  * const prisma = new PrismaClient()
  * // Fetch zero or more Cases
- * const cases = await prisma.case.findMany()
+ * const cases = await prisma.cases.findMany()
  * ```
  *
  *
@@ -53,7 +53,7 @@ export class PrismaClient<
    * ```
    * const prisma = new PrismaClient()
    * // Fetch zero or more Cases
-   * const cases = await prisma.case.findMany()
+   * const cases = await prisma.cases.findMany()
    * ```
    *
    *
@@ -150,24 +150,24 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.case`: Exposes CRUD operations for the **Case** model.
+   * `prisma.cases`: Exposes CRUD operations for the **cases** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Cases
-    * const cases = await prisma.case.findMany()
+    * const cases = await prisma.cases.findMany()
     * ```
     */
-  get case(): Prisma.CaseDelegate<ExtArgs, ClientOptions>;
+  get cases(): Prisma.casesDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.skin`: Exposes CRUD operations for the **Skin** model.
+   * `prisma.skin`: Exposes CRUD operations for the **skin** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Skins
     * const skins = await prisma.skin.findMany()
     * ```
     */
-  get skin(): Prisma.SkinDelegate<ExtArgs, ClientOptions>;
+  get skin(): Prisma.skinDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -608,8 +608,8 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Case: 'Case',
-    Skin: 'Skin'
+    cases: 'cases',
+    skin: 'skin'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -628,154 +628,154 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "case" | "skin"
+      modelProps: "cases" | "skin"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Case: {
-        payload: Prisma.$CasePayload<ExtArgs>
-        fields: Prisma.CaseFieldRefs
+      cases: {
+        payload: Prisma.$casesPayload<ExtArgs>
+        fields: Prisma.casesFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.CaseFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload> | null
+            args: Prisma.casesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.CaseFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload>
+            args: Prisma.casesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload>
           }
           findFirst: {
-            args: Prisma.CaseFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload> | null
+            args: Prisma.casesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.CaseFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload>
+            args: Prisma.casesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload>
           }
           findMany: {
-            args: Prisma.CaseFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload>[]
+            args: Prisma.casesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload>[]
           }
           create: {
-            args: Prisma.CaseCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload>
+            args: Prisma.casesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload>
           }
           createMany: {
-            args: Prisma.CaseCreateManyArgs<ExtArgs>
+            args: Prisma.casesCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.CaseCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload>[]
+            args: Prisma.casesCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload>[]
           }
           delete: {
-            args: Prisma.CaseDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload>
+            args: Prisma.casesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload>
           }
           update: {
-            args: Prisma.CaseUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload>
+            args: Prisma.casesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload>
           }
           deleteMany: {
-            args: Prisma.CaseDeleteManyArgs<ExtArgs>
+            args: Prisma.casesDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.CaseUpdateManyArgs<ExtArgs>
+            args: Prisma.casesUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.CaseUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload>[]
+            args: Prisma.casesUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload>[]
           }
           upsert: {
-            args: Prisma.CaseUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CasePayload>
+            args: Prisma.casesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$casesPayload>
           }
           aggregate: {
-            args: Prisma.CaseAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateCase>
+            args: Prisma.CasesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCases>
           }
           groupBy: {
-            args: Prisma.CaseGroupByArgs<ExtArgs>
-            result: $Utils.Optional<CaseGroupByOutputType>[]
+            args: Prisma.casesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CasesGroupByOutputType>[]
           }
           count: {
-            args: Prisma.CaseCountArgs<ExtArgs>
-            result: $Utils.Optional<CaseCountAggregateOutputType> | number
+            args: Prisma.casesCountArgs<ExtArgs>
+            result: $Utils.Optional<CasesCountAggregateOutputType> | number
           }
         }
       }
-      Skin: {
-        payload: Prisma.$SkinPayload<ExtArgs>
-        fields: Prisma.SkinFieldRefs
+      skin: {
+        payload: Prisma.$skinPayload<ExtArgs>
+        fields: Prisma.skinFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.SkinFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload> | null
+            args: Prisma.skinFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.SkinFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload>
+            args: Prisma.skinFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload>
           }
           findFirst: {
-            args: Prisma.SkinFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload> | null
+            args: Prisma.skinFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.SkinFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload>
+            args: Prisma.skinFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload>
           }
           findMany: {
-            args: Prisma.SkinFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload>[]
+            args: Prisma.skinFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload>[]
           }
           create: {
-            args: Prisma.SkinCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload>
+            args: Prisma.skinCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload>
           }
           createMany: {
-            args: Prisma.SkinCreateManyArgs<ExtArgs>
+            args: Prisma.skinCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.SkinCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload>[]
+            args: Prisma.skinCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload>[]
           }
           delete: {
-            args: Prisma.SkinDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload>
+            args: Prisma.skinDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload>
           }
           update: {
-            args: Prisma.SkinUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload>
+            args: Prisma.skinUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload>
           }
           deleteMany: {
-            args: Prisma.SkinDeleteManyArgs<ExtArgs>
+            args: Prisma.skinDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.SkinUpdateManyArgs<ExtArgs>
+            args: Prisma.skinUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.SkinUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload>[]
+            args: Prisma.skinUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload>[]
           }
           upsert: {
-            args: Prisma.SkinUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SkinPayload>
+            args: Prisma.skinUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$skinPayload>
           }
           aggregate: {
             args: Prisma.SkinAggregateArgs<ExtArgs>
             result: $Utils.Optional<AggregateSkin>
           }
           groupBy: {
-            args: Prisma.SkinGroupByArgs<ExtArgs>
+            args: Prisma.skinGroupByArgs<ExtArgs>
             result: $Utils.Optional<SkinGroupByOutputType>[]
           }
           count: {
-            args: Prisma.SkinCountArgs<ExtArgs>
+            args: Prisma.skinCountArgs<ExtArgs>
             result: $Utils.Optional<SkinCountAggregateOutputType> | number
           }
         }
@@ -864,8 +864,8 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    case?: CaseOmit
-    skin?: SkinOmit
+    cases?: casesOmit
+    skin?: skinOmit
   }
 
   /* Types for Logging */
@@ -961,300 +961,300 @@ export namespace Prisma {
    */
 
   /**
-   * Model Case
+   * Model cases
    */
 
-  export type AggregateCase = {
-    _count: CaseCountAggregateOutputType | null
-    _min: CaseMinAggregateOutputType | null
-    _max: CaseMaxAggregateOutputType | null
+  export type AggregateCases = {
+    _count: CasesCountAggregateOutputType | null
+    _min: CasesMinAggregateOutputType | null
+    _max: CasesMaxAggregateOutputType | null
   }
 
-  export type CaseMinAggregateOutputType = {
+  export type CasesMinAggregateOutputType = {
     id: string | null
     name: string | null
   }
 
-  export type CaseMaxAggregateOutputType = {
+  export type CasesMaxAggregateOutputType = {
     id: string | null
     name: string | null
   }
 
-  export type CaseCountAggregateOutputType = {
+  export type CasesCountAggregateOutputType = {
     id: number
     name: number
     _all: number
   }
 
 
-  export type CaseMinAggregateInputType = {
+  export type CasesMinAggregateInputType = {
     id?: true
     name?: true
   }
 
-  export type CaseMaxAggregateInputType = {
+  export type CasesMaxAggregateInputType = {
     id?: true
     name?: true
   }
 
-  export type CaseCountAggregateInputType = {
+  export type CasesCountAggregateInputType = {
     id?: true
     name?: true
     _all?: true
   }
 
-  export type CaseAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CasesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Case to aggregate.
+     * Filter which cases to aggregate.
      */
-    where?: CaseWhereInput
+    where?: casesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Cases to fetch.
+     * Determine the order of cases to fetch.
      */
-    orderBy?: CaseOrderByWithRelationInput | CaseOrderByWithRelationInput[]
+    orderBy?: casesOrderByWithRelationInput | casesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: CaseWhereUniqueInput
+    cursor?: casesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Cases from the position of the cursor.
+     * Take `±n` cases from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Cases.
+     * Skip the first `n` cases.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Cases
+     * Count returned cases
     **/
-    _count?: true | CaseCountAggregateInputType
+    _count?: true | CasesCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: CaseMinAggregateInputType
+    _min?: CasesMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: CaseMaxAggregateInputType
+    _max?: CasesMaxAggregateInputType
   }
 
-  export type GetCaseAggregateType<T extends CaseAggregateArgs> = {
-        [P in keyof T & keyof AggregateCase]: P extends '_count' | 'count'
+  export type GetCasesAggregateType<T extends CasesAggregateArgs> = {
+        [P in keyof T & keyof AggregateCases]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateCase[P]>
-      : GetScalarType<T[P], AggregateCase[P]>
+        : GetScalarType<T[P], AggregateCases[P]>
+      : GetScalarType<T[P], AggregateCases[P]>
   }
 
 
 
 
-  export type CaseGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: CaseWhereInput
-    orderBy?: CaseOrderByWithAggregationInput | CaseOrderByWithAggregationInput[]
-    by: CaseScalarFieldEnum[] | CaseScalarFieldEnum
-    having?: CaseScalarWhereWithAggregatesInput
+  export type casesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: casesWhereInput
+    orderBy?: casesOrderByWithAggregationInput | casesOrderByWithAggregationInput[]
+    by: CasesScalarFieldEnum[] | CasesScalarFieldEnum
+    having?: casesScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: CaseCountAggregateInputType | true
-    _min?: CaseMinAggregateInputType
-    _max?: CaseMaxAggregateInputType
+    _count?: CasesCountAggregateInputType | true
+    _min?: CasesMinAggregateInputType
+    _max?: CasesMaxAggregateInputType
   }
 
-  export type CaseGroupByOutputType = {
+  export type CasesGroupByOutputType = {
     id: string
     name: string
-    _count: CaseCountAggregateOutputType | null
-    _min: CaseMinAggregateOutputType | null
-    _max: CaseMaxAggregateOutputType | null
+    _count: CasesCountAggregateOutputType | null
+    _min: CasesMinAggregateOutputType | null
+    _max: CasesMaxAggregateOutputType | null
   }
 
-  type GetCaseGroupByPayload<T extends CaseGroupByArgs> = Prisma.PrismaPromise<
+  type GetCasesGroupByPayload<T extends casesGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<CaseGroupByOutputType, T['by']> &
+      PickEnumerable<CasesGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof CaseGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof CasesGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], CaseGroupByOutputType[P]>
-            : GetScalarType<T[P], CaseGroupByOutputType[P]>
+              : GetScalarType<T[P], CasesGroupByOutputType[P]>
+            : GetScalarType<T[P], CasesGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type CaseSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type casesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-  }, ExtArgs["result"]["case"]>
+  }, ExtArgs["result"]["cases"]>
 
-  export type CaseSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type casesSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-  }, ExtArgs["result"]["case"]>
+  }, ExtArgs["result"]["cases"]>
 
-  export type CaseSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type casesSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-  }, ExtArgs["result"]["case"]>
+  }, ExtArgs["result"]["cases"]>
 
-  export type CaseSelectScalar = {
+  export type casesSelectScalar = {
     id?: boolean
     name?: boolean
   }
 
-  export type CaseOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name", ExtArgs["result"]["case"]>
+  export type casesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name", ExtArgs["result"]["cases"]>
 
-  export type $CasePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Case"
+  export type $casesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "cases"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
       name: string
-    }, ExtArgs["result"]["case"]>
+    }, ExtArgs["result"]["cases"]>
     composites: {}
   }
 
-  type CaseGetPayload<S extends boolean | null | undefined | CaseDefaultArgs> = $Result.GetResult<Prisma.$CasePayload, S>
+  type casesGetPayload<S extends boolean | null | undefined | casesDefaultArgs> = $Result.GetResult<Prisma.$casesPayload, S>
 
-  type CaseCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<CaseFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: CaseCountAggregateInputType | true
+  type casesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<casesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: CasesCountAggregateInputType | true
     }
 
-  export interface CaseDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Case'], meta: { name: 'Case' } }
+  export interface casesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['cases'], meta: { name: 'cases' } }
     /**
-     * Find zero or one Case that matches the filter.
-     * @param {CaseFindUniqueArgs} args - Arguments to find a Case
+     * Find zero or one Cases that matches the filter.
+     * @param {casesFindUniqueArgs} args - Arguments to find a Cases
      * @example
-     * // Get one Case
-     * const case = await prisma.case.findUnique({
+     * // Get one Cases
+     * const cases = await prisma.cases.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends CaseFindUniqueArgs>(args: SelectSubset<T, CaseFindUniqueArgs<ExtArgs>>): Prisma__CaseClient<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends casesFindUniqueArgs>(args: SelectSubset<T, casesFindUniqueArgs<ExtArgs>>): Prisma__casesClient<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Case that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Cases that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {CaseFindUniqueOrThrowArgs} args - Arguments to find a Case
+     * @param {casesFindUniqueOrThrowArgs} args - Arguments to find a Cases
      * @example
-     * // Get one Case
-     * const case = await prisma.case.findUniqueOrThrow({
+     * // Get one Cases
+     * const cases = await prisma.cases.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends CaseFindUniqueOrThrowArgs>(args: SelectSubset<T, CaseFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CaseClient<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends casesFindUniqueOrThrowArgs>(args: SelectSubset<T, casesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__casesClient<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Case that matches the filter.
+     * Find the first Cases that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CaseFindFirstArgs} args - Arguments to find a Case
+     * @param {casesFindFirstArgs} args - Arguments to find a Cases
      * @example
-     * // Get one Case
-     * const case = await prisma.case.findFirst({
+     * // Get one Cases
+     * const cases = await prisma.cases.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends CaseFindFirstArgs>(args?: SelectSubset<T, CaseFindFirstArgs<ExtArgs>>): Prisma__CaseClient<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends casesFindFirstArgs>(args?: SelectSubset<T, casesFindFirstArgs<ExtArgs>>): Prisma__casesClient<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Case that matches the filter or
+     * Find the first Cases that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CaseFindFirstOrThrowArgs} args - Arguments to find a Case
+     * @param {casesFindFirstOrThrowArgs} args - Arguments to find a Cases
      * @example
-     * // Get one Case
-     * const case = await prisma.case.findFirstOrThrow({
+     * // Get one Cases
+     * const cases = await prisma.cases.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends CaseFindFirstOrThrowArgs>(args?: SelectSubset<T, CaseFindFirstOrThrowArgs<ExtArgs>>): Prisma__CaseClient<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends casesFindFirstOrThrowArgs>(args?: SelectSubset<T, casesFindFirstOrThrowArgs<ExtArgs>>): Prisma__casesClient<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Cases that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CaseFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {casesFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Cases
-     * const cases = await prisma.case.findMany()
+     * const cases = await prisma.cases.findMany()
      * 
      * // Get first 10 Cases
-     * const cases = await prisma.case.findMany({ take: 10 })
+     * const cases = await prisma.cases.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const caseWithIdOnly = await prisma.case.findMany({ select: { id: true } })
+     * const casesWithIdOnly = await prisma.cases.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends CaseFindManyArgs>(args?: SelectSubset<T, CaseFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends casesFindManyArgs>(args?: SelectSubset<T, casesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Case.
-     * @param {CaseCreateArgs} args - Arguments to create a Case.
+     * Create a Cases.
+     * @param {casesCreateArgs} args - Arguments to create a Cases.
      * @example
-     * // Create one Case
-     * const Case = await prisma.case.create({
+     * // Create one Cases
+     * const Cases = await prisma.cases.create({
      *   data: {
-     *     // ... data to create a Case
+     *     // ... data to create a Cases
      *   }
      * })
      * 
      */
-    create<T extends CaseCreateArgs>(args: SelectSubset<T, CaseCreateArgs<ExtArgs>>): Prisma__CaseClient<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends casesCreateArgs>(args: SelectSubset<T, casesCreateArgs<ExtArgs>>): Prisma__casesClient<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Cases.
-     * @param {CaseCreateManyArgs} args - Arguments to create many Cases.
+     * @param {casesCreateManyArgs} args - Arguments to create many Cases.
      * @example
      * // Create many Cases
-     * const case = await prisma.case.createMany({
+     * const cases = await prisma.cases.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends CaseCreateManyArgs>(args?: SelectSubset<T, CaseCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends casesCreateManyArgs>(args?: SelectSubset<T, casesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Cases and returns the data saved in the database.
-     * @param {CaseCreateManyAndReturnArgs} args - Arguments to create many Cases.
+     * @param {casesCreateManyAndReturnArgs} args - Arguments to create many Cases.
      * @example
      * // Create many Cases
-     * const case = await prisma.case.createManyAndReturn({
+     * const cases = await prisma.cases.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
      * // Create many Cases and only return the `id`
-     * const caseWithIdOnly = await prisma.case.createManyAndReturn({
+     * const casesWithIdOnly = await prisma.cases.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1264,28 +1264,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends CaseCreateManyAndReturnArgs>(args?: SelectSubset<T, CaseCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends casesCreateManyAndReturnArgs>(args?: SelectSubset<T, casesCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Case.
-     * @param {CaseDeleteArgs} args - Arguments to delete one Case.
+     * Delete a Cases.
+     * @param {casesDeleteArgs} args - Arguments to delete one Cases.
      * @example
-     * // Delete one Case
-     * const Case = await prisma.case.delete({
+     * // Delete one Cases
+     * const Cases = await prisma.cases.delete({
      *   where: {
-     *     // ... filter to delete one Case
+     *     // ... filter to delete one Cases
      *   }
      * })
      * 
      */
-    delete<T extends CaseDeleteArgs>(args: SelectSubset<T, CaseDeleteArgs<ExtArgs>>): Prisma__CaseClient<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends casesDeleteArgs>(args: SelectSubset<T, casesDeleteArgs<ExtArgs>>): Prisma__casesClient<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Case.
-     * @param {CaseUpdateArgs} args - Arguments to update one Case.
+     * Update one Cases.
+     * @param {casesUpdateArgs} args - Arguments to update one Cases.
      * @example
-     * // Update one Case
-     * const case = await prisma.case.update({
+     * // Update one Cases
+     * const cases = await prisma.cases.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1295,30 +1295,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends CaseUpdateArgs>(args: SelectSubset<T, CaseUpdateArgs<ExtArgs>>): Prisma__CaseClient<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends casesUpdateArgs>(args: SelectSubset<T, casesUpdateArgs<ExtArgs>>): Prisma__casesClient<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Cases.
-     * @param {CaseDeleteManyArgs} args - Arguments to filter Cases to delete.
+     * @param {casesDeleteManyArgs} args - Arguments to filter Cases to delete.
      * @example
      * // Delete a few Cases
-     * const { count } = await prisma.case.deleteMany({
+     * const { count } = await prisma.cases.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends CaseDeleteManyArgs>(args?: SelectSubset<T, CaseDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends casesDeleteManyArgs>(args?: SelectSubset<T, casesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Cases.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CaseUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {casesUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Cases
-     * const case = await prisma.case.updateMany({
+     * const cases = await prisma.cases.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1328,14 +1328,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends CaseUpdateManyArgs>(args: SelectSubset<T, CaseUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends casesUpdateManyArgs>(args: SelectSubset<T, casesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Cases and returns the data updated in the database.
-     * @param {CaseUpdateManyAndReturnArgs} args - Arguments to update many Cases.
+     * @param {casesUpdateManyAndReturnArgs} args - Arguments to update many Cases.
      * @example
      * // Update many Cases
-     * const case = await prisma.case.updateManyAndReturn({
+     * const cases = await prisma.cases.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1345,7 +1345,7 @@ export namespace Prisma {
      * })
      * 
      * // Update zero or more Cases and only return the `id`
-     * const caseWithIdOnly = await prisma.case.updateManyAndReturn({
+     * const casesWithIdOnly = await prisma.cases.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1358,56 +1358,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends CaseUpdateManyAndReturnArgs>(args: SelectSubset<T, CaseUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends casesUpdateManyAndReturnArgs>(args: SelectSubset<T, casesUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Case.
-     * @param {CaseUpsertArgs} args - Arguments to update or create a Case.
+     * Create or update one Cases.
+     * @param {casesUpsertArgs} args - Arguments to update or create a Cases.
      * @example
-     * // Update or create a Case
-     * const case = await prisma.case.upsert({
+     * // Update or create a Cases
+     * const cases = await prisma.cases.upsert({
      *   create: {
-     *     // ... data to create a Case
+     *     // ... data to create a Cases
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Case we want to update
+     *     // ... the filter for the Cases we want to update
      *   }
      * })
      */
-    upsert<T extends CaseUpsertArgs>(args: SelectSubset<T, CaseUpsertArgs<ExtArgs>>): Prisma__CaseClient<$Result.GetResult<Prisma.$CasePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends casesUpsertArgs>(args: SelectSubset<T, casesUpsertArgs<ExtArgs>>): Prisma__casesClient<$Result.GetResult<Prisma.$casesPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Cases.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CaseCountArgs} args - Arguments to filter Cases to count.
+     * @param {casesCountArgs} args - Arguments to filter Cases to count.
      * @example
      * // Count the number of Cases
-     * const count = await prisma.case.count({
+     * const count = await prisma.cases.count({
      *   where: {
      *     // ... the filter for the Cases we want to count
      *   }
      * })
     **/
-    count<T extends CaseCountArgs>(
-      args?: Subset<T, CaseCountArgs>,
+    count<T extends casesCountArgs>(
+      args?: Subset<T, casesCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], CaseCountAggregateOutputType>
+          : GetScalarType<T['select'], CasesCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Case.
+     * Allows you to perform aggregations operations on a Cases.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CaseAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {CasesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1427,13 +1427,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends CaseAggregateArgs>(args: Subset<T, CaseAggregateArgs>): Prisma.PrismaPromise<GetCaseAggregateType<T>>
+    aggregate<T extends CasesAggregateArgs>(args: Subset<T, CasesAggregateArgs>): Prisma.PrismaPromise<GetCasesAggregateType<T>>
 
     /**
-     * Group by Case.
+     * Group by Cases.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CaseGroupByArgs} args - Group by arguments.
+     * @param {casesGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1448,14 +1448,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends CaseGroupByArgs,
+      T extends casesGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: CaseGroupByArgs['orderBy'] }
-        : { orderBy?: CaseGroupByArgs['orderBy'] },
+        ? { orderBy: casesGroupByArgs['orderBy'] }
+        : { orderBy?: casesGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1504,20 +1504,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, CaseGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCaseGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, casesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCasesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Case model
+   * Fields of the cases model
    */
-  readonly fields: CaseFieldRefs;
+  readonly fields: casesFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Case.
+   * The delegate class that acts as a "Promise-like" for cases.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__CaseClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__casesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1545,379 +1545,379 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Case model
+   * Fields of the cases model
    */
-  interface CaseFieldRefs {
-    readonly id: FieldRef<"Case", 'String'>
-    readonly name: FieldRef<"Case", 'String'>
+  interface casesFieldRefs {
+    readonly id: FieldRef<"cases", 'String'>
+    readonly name: FieldRef<"cases", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Case findUnique
+   * cases findUnique
    */
-  export type CaseFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * Filter, which Case to fetch.
+     * Filter, which cases to fetch.
      */
-    where: CaseWhereUniqueInput
+    where: casesWhereUniqueInput
   }
 
   /**
-   * Case findUniqueOrThrow
+   * cases findUniqueOrThrow
    */
-  export type CaseFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * Filter, which Case to fetch.
+     * Filter, which cases to fetch.
      */
-    where: CaseWhereUniqueInput
+    where: casesWhereUniqueInput
   }
 
   /**
-   * Case findFirst
+   * cases findFirst
    */
-  export type CaseFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * Filter, which Case to fetch.
+     * Filter, which cases to fetch.
      */
-    where?: CaseWhereInput
+    where?: casesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Cases to fetch.
+     * Determine the order of cases to fetch.
      */
-    orderBy?: CaseOrderByWithRelationInput | CaseOrderByWithRelationInput[]
+    orderBy?: casesOrderByWithRelationInput | casesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Cases.
+     * Sets the position for searching for cases.
      */
-    cursor?: CaseWhereUniqueInput
+    cursor?: casesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Cases from the position of the cursor.
+     * Take `±n` cases from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Cases.
+     * Skip the first `n` cases.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Cases.
+     * Filter by unique combinations of cases.
      */
-    distinct?: CaseScalarFieldEnum | CaseScalarFieldEnum[]
+    distinct?: CasesScalarFieldEnum | CasesScalarFieldEnum[]
   }
 
   /**
-   * Case findFirstOrThrow
+   * cases findFirstOrThrow
    */
-  export type CaseFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * Filter, which Case to fetch.
+     * Filter, which cases to fetch.
      */
-    where?: CaseWhereInput
+    where?: casesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Cases to fetch.
+     * Determine the order of cases to fetch.
      */
-    orderBy?: CaseOrderByWithRelationInput | CaseOrderByWithRelationInput[]
+    orderBy?: casesOrderByWithRelationInput | casesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Cases.
+     * Sets the position for searching for cases.
      */
-    cursor?: CaseWhereUniqueInput
+    cursor?: casesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Cases from the position of the cursor.
+     * Take `±n` cases from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Cases.
+     * Skip the first `n` cases.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Cases.
+     * Filter by unique combinations of cases.
      */
-    distinct?: CaseScalarFieldEnum | CaseScalarFieldEnum[]
+    distinct?: CasesScalarFieldEnum | CasesScalarFieldEnum[]
   }
 
   /**
-   * Case findMany
+   * cases findMany
    */
-  export type CaseFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * Filter, which Cases to fetch.
+     * Filter, which cases to fetch.
      */
-    where?: CaseWhereInput
+    where?: casesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Cases to fetch.
+     * Determine the order of cases to fetch.
      */
-    orderBy?: CaseOrderByWithRelationInput | CaseOrderByWithRelationInput[]
+    orderBy?: casesOrderByWithRelationInput | casesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Cases.
+     * Sets the position for listing cases.
      */
-    cursor?: CaseWhereUniqueInput
+    cursor?: casesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Cases from the position of the cursor.
+     * Take `±n` cases from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Cases.
+     * Skip the first `n` cases.
      */
     skip?: number
-    distinct?: CaseScalarFieldEnum | CaseScalarFieldEnum[]
+    distinct?: CasesScalarFieldEnum | CasesScalarFieldEnum[]
   }
 
   /**
-   * Case create
+   * cases create
    */
-  export type CaseCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * The data needed to create a Case.
+     * The data needed to create a cases.
      */
-    data: XOR<CaseCreateInput, CaseUncheckedCreateInput>
+    data: XOR<casesCreateInput, casesUncheckedCreateInput>
   }
 
   /**
-   * Case createMany
+   * cases createMany
    */
-  export type CaseCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Cases.
+     * The data used to create many cases.
      */
-    data: CaseCreateManyInput | CaseCreateManyInput[]
+    data: casesCreateManyInput | casesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Case createManyAndReturn
+   * cases createManyAndReturn
    */
-  export type CaseCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelectCreateManyAndReturn<ExtArgs> | null
+    select?: casesSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * The data used to create many Cases.
+     * The data used to create many cases.
      */
-    data: CaseCreateManyInput | CaseCreateManyInput[]
+    data: casesCreateManyInput | casesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Case update
+   * cases update
    */
-  export type CaseUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * The data needed to update a Case.
+     * The data needed to update a cases.
      */
-    data: XOR<CaseUpdateInput, CaseUncheckedUpdateInput>
+    data: XOR<casesUpdateInput, casesUncheckedUpdateInput>
     /**
-     * Choose, which Case to update.
+     * Choose, which cases to update.
      */
-    where: CaseWhereUniqueInput
+    where: casesWhereUniqueInput
   }
 
   /**
-   * Case updateMany
+   * cases updateMany
    */
-  export type CaseUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Cases.
+     * The data used to update cases.
      */
-    data: XOR<CaseUpdateManyMutationInput, CaseUncheckedUpdateManyInput>
+    data: XOR<casesUpdateManyMutationInput, casesUncheckedUpdateManyInput>
     /**
-     * Filter which Cases to update
+     * Filter which cases to update
      */
-    where?: CaseWhereInput
+    where?: casesWhereInput
     /**
-     * Limit how many Cases to update.
+     * Limit how many cases to update.
      */
     limit?: number
   }
 
   /**
-   * Case updateManyAndReturn
+   * cases updateManyAndReturn
    */
-  export type CaseUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: casesSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * The data used to update Cases.
+     * The data used to update cases.
      */
-    data: XOR<CaseUpdateManyMutationInput, CaseUncheckedUpdateManyInput>
+    data: XOR<casesUpdateManyMutationInput, casesUncheckedUpdateManyInput>
     /**
-     * Filter which Cases to update
+     * Filter which cases to update
      */
-    where?: CaseWhereInput
+    where?: casesWhereInput
     /**
-     * Limit how many Cases to update.
+     * Limit how many cases to update.
      */
     limit?: number
   }
 
   /**
-   * Case upsert
+   * cases upsert
    */
-  export type CaseUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * The filter to search for the Case to update in case it exists.
+     * The filter to search for the cases to update in case it exists.
      */
-    where: CaseWhereUniqueInput
+    where: casesWhereUniqueInput
     /**
-     * In case the Case found by the `where` argument doesn't exist, create a new Case with this data.
+     * In case the cases found by the `where` argument doesn't exist, create a new cases with this data.
      */
-    create: XOR<CaseCreateInput, CaseUncheckedCreateInput>
+    create: XOR<casesCreateInput, casesUncheckedCreateInput>
     /**
-     * In case the Case was found with the provided `where` argument, update it with this data.
+     * In case the cases was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<CaseUpdateInput, CaseUncheckedUpdateInput>
+    update: XOR<casesUpdateInput, casesUncheckedUpdateInput>
   }
 
   /**
-   * Case delete
+   * cases delete
    */
-  export type CaseDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
     /**
-     * Filter which Case to delete.
+     * Filter which cases to delete.
      */
-    where: CaseWhereUniqueInput
+    where: casesWhereUniqueInput
   }
 
   /**
-   * Case deleteMany
+   * cases deleteMany
    */
-  export type CaseDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Cases to delete
+     * Filter which cases to delete
      */
-    where?: CaseWhereInput
+    where?: casesWhereInput
     /**
-     * Limit how many Cases to delete.
+     * Limit how many cases to delete.
      */
     limit?: number
   }
 
   /**
-   * Case without action
+   * cases without action
    */
-  export type CaseDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type casesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Case
+     * Select specific fields to fetch from the cases
      */
-    select?: CaseSelect<ExtArgs> | null
+    select?: casesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Case
+     * Omit specific fields from the cases
      */
-    omit?: CaseOmit<ExtArgs> | null
+    omit?: casesOmit<ExtArgs> | null
   }
 
 
   /**
-   * Model Skin
+   * Model skin
    */
 
   export type AggregateSkin = {
@@ -1979,37 +1979,37 @@ export namespace Prisma {
 
   export type SkinAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Skin to aggregate.
+     * Filter which skin to aggregate.
      */
-    where?: SkinWhereInput
+    where?: skinWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Skins to fetch.
+     * Determine the order of skins to fetch.
      */
-    orderBy?: SkinOrderByWithRelationInput | SkinOrderByWithRelationInput[]
+    orderBy?: skinOrderByWithRelationInput | skinOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: SkinWhereUniqueInput
+    cursor?: skinWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Skins from the position of the cursor.
+     * Take `±n` skins from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Skins.
+     * Skip the first `n` skins.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Skins
+     * Count returned skins
     **/
     _count?: true | SkinCountAggregateInputType
     /**
@@ -2037,11 +2037,11 @@ export namespace Prisma {
 
 
 
-  export type SkinGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: SkinWhereInput
-    orderBy?: SkinOrderByWithAggregationInput | SkinOrderByWithAggregationInput[]
+  export type skinGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: skinWhereInput
+    orderBy?: skinOrderByWithAggregationInput | skinOrderByWithAggregationInput[]
     by: SkinScalarFieldEnum[] | SkinScalarFieldEnum
-    having?: SkinScalarWhereWithAggregatesInput
+    having?: skinScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: SkinCountAggregateInputType | true
@@ -2060,7 +2060,7 @@ export namespace Prisma {
     _max: SkinMaxAggregateOutputType | null
   }
 
-  type GetSkinGroupByPayload<T extends SkinGroupByArgs> = Prisma.PrismaPromise<
+  type GetSkinGroupByPayload<T extends skinGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<SkinGroupByOutputType, T['by']> &
         {
@@ -2074,7 +2074,7 @@ export namespace Prisma {
     >
 
 
-  export type SkinSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type skinSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     rarity?: boolean
@@ -2082,7 +2082,7 @@ export namespace Prisma {
     caseId?: boolean
   }, ExtArgs["result"]["skin"]>
 
-  export type SkinSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type skinSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     rarity?: boolean
@@ -2090,7 +2090,7 @@ export namespace Prisma {
     caseId?: boolean
   }, ExtArgs["result"]["skin"]>
 
-  export type SkinSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type skinSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     rarity?: boolean
@@ -2098,7 +2098,7 @@ export namespace Prisma {
     caseId?: boolean
   }, ExtArgs["result"]["skin"]>
 
-  export type SkinSelectScalar = {
+  export type skinSelectScalar = {
     id?: boolean
     name?: boolean
     rarity?: boolean
@@ -2106,10 +2106,10 @@ export namespace Prisma {
     caseId?: boolean
   }
 
-  export type SkinOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "rarity" | "weapon" | "caseId", ExtArgs["result"]["skin"]>
+  export type skinOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "rarity" | "weapon" | "caseId", ExtArgs["result"]["skin"]>
 
-  export type $SkinPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Skin"
+  export type $skinPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "skin"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -2121,18 +2121,18 @@ export namespace Prisma {
     composites: {}
   }
 
-  type SkinGetPayload<S extends boolean | null | undefined | SkinDefaultArgs> = $Result.GetResult<Prisma.$SkinPayload, S>
+  type skinGetPayload<S extends boolean | null | undefined | skinDefaultArgs> = $Result.GetResult<Prisma.$skinPayload, S>
 
-  type SkinCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<SkinFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+  type skinCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<skinFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
       select?: SkinCountAggregateInputType | true
     }
 
-  export interface SkinDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Skin'], meta: { name: 'Skin' } }
+  export interface skinDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['skin'], meta: { name: 'skin' } }
     /**
      * Find zero or one Skin that matches the filter.
-     * @param {SkinFindUniqueArgs} args - Arguments to find a Skin
+     * @param {skinFindUniqueArgs} args - Arguments to find a Skin
      * @example
      * // Get one Skin
      * const skin = await prisma.skin.findUnique({
@@ -2141,12 +2141,12 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUnique<T extends SkinFindUniqueArgs>(args: SelectSubset<T, SkinFindUniqueArgs<ExtArgs>>): Prisma__SkinClient<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends skinFindUniqueArgs>(args: SelectSubset<T, skinFindUniqueArgs<ExtArgs>>): Prisma__skinClient<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find one Skin that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {SkinFindUniqueOrThrowArgs} args - Arguments to find a Skin
+     * @param {skinFindUniqueOrThrowArgs} args - Arguments to find a Skin
      * @example
      * // Get one Skin
      * const skin = await prisma.skin.findUniqueOrThrow({
@@ -2155,13 +2155,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUniqueOrThrow<T extends SkinFindUniqueOrThrowArgs>(args: SelectSubset<T, SkinFindUniqueOrThrowArgs<ExtArgs>>): Prisma__SkinClient<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends skinFindUniqueOrThrowArgs>(args: SelectSubset<T, skinFindUniqueOrThrowArgs<ExtArgs>>): Prisma__skinClient<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Skin that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SkinFindFirstArgs} args - Arguments to find a Skin
+     * @param {skinFindFirstArgs} args - Arguments to find a Skin
      * @example
      * // Get one Skin
      * const skin = await prisma.skin.findFirst({
@@ -2170,14 +2170,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirst<T extends SkinFindFirstArgs>(args?: SelectSubset<T, SkinFindFirstArgs<ExtArgs>>): Prisma__SkinClient<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends skinFindFirstArgs>(args?: SelectSubset<T, skinFindFirstArgs<ExtArgs>>): Prisma__skinClient<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Skin that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SkinFindFirstOrThrowArgs} args - Arguments to find a Skin
+     * @param {skinFindFirstOrThrowArgs} args - Arguments to find a Skin
      * @example
      * // Get one Skin
      * const skin = await prisma.skin.findFirstOrThrow({
@@ -2186,13 +2186,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirstOrThrow<T extends SkinFindFirstOrThrowArgs>(args?: SelectSubset<T, SkinFindFirstOrThrowArgs<ExtArgs>>): Prisma__SkinClient<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends skinFindFirstOrThrowArgs>(args?: SelectSubset<T, skinFindFirstOrThrowArgs<ExtArgs>>): Prisma__skinClient<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Skins that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SkinFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {skinFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Skins
      * const skins = await prisma.skin.findMany()
@@ -2204,11 +2204,11 @@ export namespace Prisma {
      * const skinWithIdOnly = await prisma.skin.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends SkinFindManyArgs>(args?: SelectSubset<T, SkinFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends skinFindManyArgs>(args?: SelectSubset<T, skinFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
      * Create a Skin.
-     * @param {SkinCreateArgs} args - Arguments to create a Skin.
+     * @param {skinCreateArgs} args - Arguments to create a Skin.
      * @example
      * // Create one Skin
      * const Skin = await prisma.skin.create({
@@ -2218,11 +2218,11 @@ export namespace Prisma {
      * })
      * 
      */
-    create<T extends SkinCreateArgs>(args: SelectSubset<T, SkinCreateArgs<ExtArgs>>): Prisma__SkinClient<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends skinCreateArgs>(args: SelectSubset<T, skinCreateArgs<ExtArgs>>): Prisma__skinClient<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Skins.
-     * @param {SkinCreateManyArgs} args - Arguments to create many Skins.
+     * @param {skinCreateManyArgs} args - Arguments to create many Skins.
      * @example
      * // Create many Skins
      * const skin = await prisma.skin.createMany({
@@ -2232,11 +2232,11 @@ export namespace Prisma {
      * })
      *     
      */
-    createMany<T extends SkinCreateManyArgs>(args?: SelectSubset<T, SkinCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends skinCreateManyArgs>(args?: SelectSubset<T, skinCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Skins and returns the data saved in the database.
-     * @param {SkinCreateManyAndReturnArgs} args - Arguments to create many Skins.
+     * @param {skinCreateManyAndReturnArgs} args - Arguments to create many Skins.
      * @example
      * // Create many Skins
      * const skin = await prisma.skin.createManyAndReturn({
@@ -2256,11 +2256,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends SkinCreateManyAndReturnArgs>(args?: SelectSubset<T, SkinCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends skinCreateManyAndReturnArgs>(args?: SelectSubset<T, skinCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Delete a Skin.
-     * @param {SkinDeleteArgs} args - Arguments to delete one Skin.
+     * @param {skinDeleteArgs} args - Arguments to delete one Skin.
      * @example
      * // Delete one Skin
      * const Skin = await prisma.skin.delete({
@@ -2270,11 +2270,11 @@ export namespace Prisma {
      * })
      * 
      */
-    delete<T extends SkinDeleteArgs>(args: SelectSubset<T, SkinDeleteArgs<ExtArgs>>): Prisma__SkinClient<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends skinDeleteArgs>(args: SelectSubset<T, skinDeleteArgs<ExtArgs>>): Prisma__skinClient<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Update one Skin.
-     * @param {SkinUpdateArgs} args - Arguments to update one Skin.
+     * @param {skinUpdateArgs} args - Arguments to update one Skin.
      * @example
      * // Update one Skin
      * const skin = await prisma.skin.update({
@@ -2287,11 +2287,11 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends SkinUpdateArgs>(args: SelectSubset<T, SkinUpdateArgs<ExtArgs>>): Prisma__SkinClient<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends skinUpdateArgs>(args: SelectSubset<T, skinUpdateArgs<ExtArgs>>): Prisma__skinClient<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Skins.
-     * @param {SkinDeleteManyArgs} args - Arguments to filter Skins to delete.
+     * @param {skinDeleteManyArgs} args - Arguments to filter Skins to delete.
      * @example
      * // Delete a few Skins
      * const { count } = await prisma.skin.deleteMany({
@@ -2301,13 +2301,13 @@ export namespace Prisma {
      * })
      * 
      */
-    deleteMany<T extends SkinDeleteManyArgs>(args?: SelectSubset<T, SkinDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends skinDeleteManyArgs>(args?: SelectSubset<T, skinDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Skins.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SkinUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {skinUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Skins
      * const skin = await prisma.skin.updateMany({
@@ -2320,11 +2320,11 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends SkinUpdateManyArgs>(args: SelectSubset<T, SkinUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends skinUpdateManyArgs>(args: SelectSubset<T, skinUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Skins and returns the data updated in the database.
-     * @param {SkinUpdateManyAndReturnArgs} args - Arguments to update many Skins.
+     * @param {skinUpdateManyAndReturnArgs} args - Arguments to update many Skins.
      * @example
      * // Update many Skins
      * const skin = await prisma.skin.updateManyAndReturn({
@@ -2350,11 +2350,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends SkinUpdateManyAndReturnArgs>(args: SelectSubset<T, SkinUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends skinUpdateManyAndReturnArgs>(args: SelectSubset<T, skinUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Skin.
-     * @param {SkinUpsertArgs} args - Arguments to update or create a Skin.
+     * @param {skinUpsertArgs} args - Arguments to update or create a Skin.
      * @example
      * // Update or create a Skin
      * const skin = await prisma.skin.upsert({
@@ -2369,14 +2369,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    upsert<T extends SkinUpsertArgs>(args: SelectSubset<T, SkinUpsertArgs<ExtArgs>>): Prisma__SkinClient<$Result.GetResult<Prisma.$SkinPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends skinUpsertArgs>(args: SelectSubset<T, skinUpsertArgs<ExtArgs>>): Prisma__skinClient<$Result.GetResult<Prisma.$skinPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Skins.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SkinCountArgs} args - Arguments to filter Skins to count.
+     * @param {skinCountArgs} args - Arguments to filter Skins to count.
      * @example
      * // Count the number of Skins
      * const count = await prisma.skin.count({
@@ -2385,8 +2385,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends SkinCountArgs>(
-      args?: Subset<T, SkinCountArgs>,
+    count<T extends skinCountArgs>(
+      args?: Subset<T, skinCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -2425,7 +2425,7 @@ export namespace Prisma {
      * Group by Skin.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SkinGroupByArgs} args - Group by arguments.
+     * @param {skinGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2440,14 +2440,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends SkinGroupByArgs,
+      T extends skinGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: SkinGroupByArgs['orderBy'] }
-        : { orderBy?: SkinGroupByArgs['orderBy'] },
+        ? { orderBy: skinGroupByArgs['orderBy'] }
+        : { orderBy?: skinGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2496,20 +2496,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, SkinGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetSkinGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, skinGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetSkinGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Skin model
+   * Fields of the skin model
    */
-  readonly fields: SkinFieldRefs;
+  readonly fields: skinFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Skin.
+   * The delegate class that acts as a "Promise-like" for skin.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__SkinClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__skinClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2537,377 +2537,377 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Skin model
+   * Fields of the skin model
    */
-  interface SkinFieldRefs {
-    readonly id: FieldRef<"Skin", 'String'>
-    readonly name: FieldRef<"Skin", 'String'>
-    readonly rarity: FieldRef<"Skin", 'String'>
-    readonly weapon: FieldRef<"Skin", 'String'>
-    readonly caseId: FieldRef<"Skin", 'String'>
+  interface skinFieldRefs {
+    readonly id: FieldRef<"skin", 'String'>
+    readonly name: FieldRef<"skin", 'String'>
+    readonly rarity: FieldRef<"skin", 'String'>
+    readonly weapon: FieldRef<"skin", 'String'>
+    readonly caseId: FieldRef<"skin", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Skin findUnique
+   * skin findUnique
    */
-  export type SkinFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * Filter, which Skin to fetch.
+     * Filter, which skin to fetch.
      */
-    where: SkinWhereUniqueInput
+    where: skinWhereUniqueInput
   }
 
   /**
-   * Skin findUniqueOrThrow
+   * skin findUniqueOrThrow
    */
-  export type SkinFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * Filter, which Skin to fetch.
+     * Filter, which skin to fetch.
      */
-    where: SkinWhereUniqueInput
+    where: skinWhereUniqueInput
   }
 
   /**
-   * Skin findFirst
+   * skin findFirst
    */
-  export type SkinFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * Filter, which Skin to fetch.
+     * Filter, which skin to fetch.
      */
-    where?: SkinWhereInput
+    where?: skinWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Skins to fetch.
+     * Determine the order of skins to fetch.
      */
-    orderBy?: SkinOrderByWithRelationInput | SkinOrderByWithRelationInput[]
+    orderBy?: skinOrderByWithRelationInput | skinOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Skins.
+     * Sets the position for searching for skins.
      */
-    cursor?: SkinWhereUniqueInput
+    cursor?: skinWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Skins from the position of the cursor.
+     * Take `±n` skins from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Skins.
+     * Skip the first `n` skins.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Skins.
+     * Filter by unique combinations of skins.
      */
     distinct?: SkinScalarFieldEnum | SkinScalarFieldEnum[]
   }
 
   /**
-   * Skin findFirstOrThrow
+   * skin findFirstOrThrow
    */
-  export type SkinFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * Filter, which Skin to fetch.
+     * Filter, which skin to fetch.
      */
-    where?: SkinWhereInput
+    where?: skinWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Skins to fetch.
+     * Determine the order of skins to fetch.
      */
-    orderBy?: SkinOrderByWithRelationInput | SkinOrderByWithRelationInput[]
+    orderBy?: skinOrderByWithRelationInput | skinOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Skins.
+     * Sets the position for searching for skins.
      */
-    cursor?: SkinWhereUniqueInput
+    cursor?: skinWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Skins from the position of the cursor.
+     * Take `±n` skins from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Skins.
+     * Skip the first `n` skins.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Skins.
+     * Filter by unique combinations of skins.
      */
     distinct?: SkinScalarFieldEnum | SkinScalarFieldEnum[]
   }
 
   /**
-   * Skin findMany
+   * skin findMany
    */
-  export type SkinFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * Filter, which Skins to fetch.
+     * Filter, which skins to fetch.
      */
-    where?: SkinWhereInput
+    where?: skinWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Skins to fetch.
+     * Determine the order of skins to fetch.
      */
-    orderBy?: SkinOrderByWithRelationInput | SkinOrderByWithRelationInput[]
+    orderBy?: skinOrderByWithRelationInput | skinOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Skins.
+     * Sets the position for listing skins.
      */
-    cursor?: SkinWhereUniqueInput
+    cursor?: skinWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Skins from the position of the cursor.
+     * Take `±n` skins from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Skins.
+     * Skip the first `n` skins.
      */
     skip?: number
     distinct?: SkinScalarFieldEnum | SkinScalarFieldEnum[]
   }
 
   /**
-   * Skin create
+   * skin create
    */
-  export type SkinCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * The data needed to create a Skin.
+     * The data needed to create a skin.
      */
-    data: XOR<SkinCreateInput, SkinUncheckedCreateInput>
+    data: XOR<skinCreateInput, skinUncheckedCreateInput>
   }
 
   /**
-   * Skin createMany
+   * skin createMany
    */
-  export type SkinCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Skins.
+     * The data used to create many skins.
      */
-    data: SkinCreateManyInput | SkinCreateManyInput[]
+    data: skinCreateManyInput | skinCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Skin createManyAndReturn
+   * skin createManyAndReturn
    */
-  export type SkinCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelectCreateManyAndReturn<ExtArgs> | null
+    select?: skinSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * The data used to create many Skins.
+     * The data used to create many skins.
      */
-    data: SkinCreateManyInput | SkinCreateManyInput[]
+    data: skinCreateManyInput | skinCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Skin update
+   * skin update
    */
-  export type SkinUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * The data needed to update a Skin.
+     * The data needed to update a skin.
      */
-    data: XOR<SkinUpdateInput, SkinUncheckedUpdateInput>
+    data: XOR<skinUpdateInput, skinUncheckedUpdateInput>
     /**
-     * Choose, which Skin to update.
+     * Choose, which skin to update.
      */
-    where: SkinWhereUniqueInput
+    where: skinWhereUniqueInput
   }
 
   /**
-   * Skin updateMany
+   * skin updateMany
    */
-  export type SkinUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Skins.
+     * The data used to update skins.
      */
-    data: XOR<SkinUpdateManyMutationInput, SkinUncheckedUpdateManyInput>
+    data: XOR<skinUpdateManyMutationInput, skinUncheckedUpdateManyInput>
     /**
-     * Filter which Skins to update
+     * Filter which skins to update
      */
-    where?: SkinWhereInput
+    where?: skinWhereInput
     /**
-     * Limit how many Skins to update.
+     * Limit how many skins to update.
      */
     limit?: number
   }
 
   /**
-   * Skin updateManyAndReturn
+   * skin updateManyAndReturn
    */
-  export type SkinUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: skinSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * The data used to update Skins.
+     * The data used to update skins.
      */
-    data: XOR<SkinUpdateManyMutationInput, SkinUncheckedUpdateManyInput>
+    data: XOR<skinUpdateManyMutationInput, skinUncheckedUpdateManyInput>
     /**
-     * Filter which Skins to update
+     * Filter which skins to update
      */
-    where?: SkinWhereInput
+    where?: skinWhereInput
     /**
-     * Limit how many Skins to update.
+     * Limit how many skins to update.
      */
     limit?: number
   }
 
   /**
-   * Skin upsert
+   * skin upsert
    */
-  export type SkinUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * The filter to search for the Skin to update in case it exists.
+     * The filter to search for the skin to update in case it exists.
      */
-    where: SkinWhereUniqueInput
+    where: skinWhereUniqueInput
     /**
-     * In case the Skin found by the `where` argument doesn't exist, create a new Skin with this data.
+     * In case the skin found by the `where` argument doesn't exist, create a new skin with this data.
      */
-    create: XOR<SkinCreateInput, SkinUncheckedCreateInput>
+    create: XOR<skinCreateInput, skinUncheckedCreateInput>
     /**
-     * In case the Skin was found with the provided `where` argument, update it with this data.
+     * In case the skin was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<SkinUpdateInput, SkinUncheckedUpdateInput>
+    update: XOR<skinUpdateInput, skinUncheckedUpdateInput>
   }
 
   /**
-   * Skin delete
+   * skin delete
    */
-  export type SkinDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
     /**
-     * Filter which Skin to delete.
+     * Filter which skin to delete.
      */
-    where: SkinWhereUniqueInput
+    where: skinWhereUniqueInput
   }
 
   /**
-   * Skin deleteMany
+   * skin deleteMany
    */
-  export type SkinDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Skins to delete
+     * Filter which skins to delete
      */
-    where?: SkinWhereInput
+    where?: skinWhereInput
     /**
-     * Limit how many Skins to delete.
+     * Limit how many skins to delete.
      */
     limit?: number
   }
 
   /**
-   * Skin without action
+   * skin without action
    */
-  export type SkinDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type skinDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Skin
+     * Select specific fields to fetch from the skin
      */
-    select?: SkinSelect<ExtArgs> | null
+    select?: skinSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Skin
+     * Omit specific fields from the skin
      */
-    omit?: SkinOmit<ExtArgs> | null
+    omit?: skinOmit<ExtArgs> | null
   }
 
 
@@ -2925,12 +2925,12 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const CaseScalarFieldEnum: {
+  export const CasesScalarFieldEnum: {
     id: 'id',
     name: 'name'
   };
 
-  export type CaseScalarFieldEnum = (typeof CaseScalarFieldEnum)[keyof typeof CaseScalarFieldEnum]
+  export type CasesScalarFieldEnum = (typeof CasesScalarFieldEnum)[keyof typeof CasesScalarFieldEnum]
 
 
   export const SkinScalarFieldEnum: {
@@ -3004,55 +3004,55 @@ export namespace Prisma {
    */
 
 
-  export type CaseWhereInput = {
-    AND?: CaseWhereInput | CaseWhereInput[]
-    OR?: CaseWhereInput[]
-    NOT?: CaseWhereInput | CaseWhereInput[]
-    id?: StringFilter<"Case"> | string
-    name?: StringFilter<"Case"> | string
+  export type casesWhereInput = {
+    AND?: casesWhereInput | casesWhereInput[]
+    OR?: casesWhereInput[]
+    NOT?: casesWhereInput | casesWhereInput[]
+    id?: StringFilter<"cases"> | string
+    name?: StringFilter<"cases"> | string
   }
 
-  export type CaseOrderByWithRelationInput = {
+  export type casesOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
   }
 
-  export type CaseWhereUniqueInput = Prisma.AtLeast<{
+  export type casesWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: CaseWhereInput | CaseWhereInput[]
-    OR?: CaseWhereInput[]
-    NOT?: CaseWhereInput | CaseWhereInput[]
-    name?: StringFilter<"Case"> | string
+    AND?: casesWhereInput | casesWhereInput[]
+    OR?: casesWhereInput[]
+    NOT?: casesWhereInput | casesWhereInput[]
+    name?: StringFilter<"cases"> | string
   }, "id">
 
-  export type CaseOrderByWithAggregationInput = {
+  export type casesOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
-    _count?: CaseCountOrderByAggregateInput
-    _max?: CaseMaxOrderByAggregateInput
-    _min?: CaseMinOrderByAggregateInput
+    _count?: casesCountOrderByAggregateInput
+    _max?: casesMaxOrderByAggregateInput
+    _min?: casesMinOrderByAggregateInput
   }
 
-  export type CaseScalarWhereWithAggregatesInput = {
-    AND?: CaseScalarWhereWithAggregatesInput | CaseScalarWhereWithAggregatesInput[]
-    OR?: CaseScalarWhereWithAggregatesInput[]
-    NOT?: CaseScalarWhereWithAggregatesInput | CaseScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Case"> | string
-    name?: StringWithAggregatesFilter<"Case"> | string
+  export type casesScalarWhereWithAggregatesInput = {
+    AND?: casesScalarWhereWithAggregatesInput | casesScalarWhereWithAggregatesInput[]
+    OR?: casesScalarWhereWithAggregatesInput[]
+    NOT?: casesScalarWhereWithAggregatesInput | casesScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"cases"> | string
+    name?: StringWithAggregatesFilter<"cases"> | string
   }
 
-  export type SkinWhereInput = {
-    AND?: SkinWhereInput | SkinWhereInput[]
-    OR?: SkinWhereInput[]
-    NOT?: SkinWhereInput | SkinWhereInput[]
-    id?: StringFilter<"Skin"> | string
-    name?: StringFilter<"Skin"> | string
-    rarity?: StringFilter<"Skin"> | string
-    weapon?: StringFilter<"Skin"> | string
-    caseId?: StringNullableFilter<"Skin"> | string | null
+  export type skinWhereInput = {
+    AND?: skinWhereInput | skinWhereInput[]
+    OR?: skinWhereInput[]
+    NOT?: skinWhereInput | skinWhereInput[]
+    id?: StringFilter<"skin"> | string
+    name?: StringFilter<"skin"> | string
+    rarity?: StringFilter<"skin"> | string
+    weapon?: StringFilter<"skin"> | string
+    caseId?: StringNullableFilter<"skin"> | string | null
   }
 
-  export type SkinOrderByWithRelationInput = {
+  export type skinOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
     rarity?: SortOrder
@@ -3060,91 +3060,91 @@ export namespace Prisma {
     caseId?: SortOrderInput | SortOrder
   }
 
-  export type SkinWhereUniqueInput = Prisma.AtLeast<{
+  export type skinWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: SkinWhereInput | SkinWhereInput[]
-    OR?: SkinWhereInput[]
-    NOT?: SkinWhereInput | SkinWhereInput[]
-    name?: StringFilter<"Skin"> | string
-    rarity?: StringFilter<"Skin"> | string
-    weapon?: StringFilter<"Skin"> | string
-    caseId?: StringNullableFilter<"Skin"> | string | null
+    AND?: skinWhereInput | skinWhereInput[]
+    OR?: skinWhereInput[]
+    NOT?: skinWhereInput | skinWhereInput[]
+    name?: StringFilter<"skin"> | string
+    rarity?: StringFilter<"skin"> | string
+    weapon?: StringFilter<"skin"> | string
+    caseId?: StringNullableFilter<"skin"> | string | null
   }, "id">
 
-  export type SkinOrderByWithAggregationInput = {
+  export type skinOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
     rarity?: SortOrder
     weapon?: SortOrder
     caseId?: SortOrderInput | SortOrder
-    _count?: SkinCountOrderByAggregateInput
-    _max?: SkinMaxOrderByAggregateInput
-    _min?: SkinMinOrderByAggregateInput
+    _count?: skinCountOrderByAggregateInput
+    _max?: skinMaxOrderByAggregateInput
+    _min?: skinMinOrderByAggregateInput
   }
 
-  export type SkinScalarWhereWithAggregatesInput = {
-    AND?: SkinScalarWhereWithAggregatesInput | SkinScalarWhereWithAggregatesInput[]
-    OR?: SkinScalarWhereWithAggregatesInput[]
-    NOT?: SkinScalarWhereWithAggregatesInput | SkinScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Skin"> | string
-    name?: StringWithAggregatesFilter<"Skin"> | string
-    rarity?: StringWithAggregatesFilter<"Skin"> | string
-    weapon?: StringWithAggregatesFilter<"Skin"> | string
-    caseId?: StringNullableWithAggregatesFilter<"Skin"> | string | null
+  export type skinScalarWhereWithAggregatesInput = {
+    AND?: skinScalarWhereWithAggregatesInput | skinScalarWhereWithAggregatesInput[]
+    OR?: skinScalarWhereWithAggregatesInput[]
+    NOT?: skinScalarWhereWithAggregatesInput | skinScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"skin"> | string
+    name?: StringWithAggregatesFilter<"skin"> | string
+    rarity?: StringWithAggregatesFilter<"skin"> | string
+    weapon?: StringWithAggregatesFilter<"skin"> | string
+    caseId?: StringNullableWithAggregatesFilter<"skin"> | string | null
   }
 
-  export type CaseCreateInput = {
-    id?: string
+  export type casesCreateInput = {
+    id: string
     name: string
   }
 
-  export type CaseUncheckedCreateInput = {
-    id?: string
+  export type casesUncheckedCreateInput = {
+    id: string
     name: string
   }
 
-  export type CaseUpdateInput = {
+  export type casesUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
   }
 
-  export type CaseUncheckedUpdateInput = {
+  export type casesUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
   }
 
-  export type CaseCreateManyInput = {
-    id?: string
+  export type casesCreateManyInput = {
+    id: string
     name: string
   }
 
-  export type CaseUpdateManyMutationInput = {
+  export type casesUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
   }
 
-  export type CaseUncheckedUpdateManyInput = {
+  export type casesUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
   }
 
-  export type SkinCreateInput = {
-    id?: string
+  export type skinCreateInput = {
+    id: string
     name: string
     rarity: string
     weapon: string
     caseId?: string | null
   }
 
-  export type SkinUncheckedCreateInput = {
-    id?: string
+  export type skinUncheckedCreateInput = {
+    id: string
     name: string
     rarity: string
     weapon: string
     caseId?: string | null
   }
 
-  export type SkinUpdateInput = {
+  export type skinUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     rarity?: StringFieldUpdateOperationsInput | string
@@ -3152,7 +3152,7 @@ export namespace Prisma {
     caseId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type SkinUncheckedUpdateInput = {
+  export type skinUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     rarity?: StringFieldUpdateOperationsInput | string
@@ -3160,15 +3160,15 @@ export namespace Prisma {
     caseId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type SkinCreateManyInput = {
-    id?: string
+  export type skinCreateManyInput = {
+    id: string
     name: string
     rarity: string
     weapon: string
     caseId?: string | null
   }
 
-  export type SkinUpdateManyMutationInput = {
+  export type skinUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     rarity?: StringFieldUpdateOperationsInput | string
@@ -3176,7 +3176,7 @@ export namespace Prisma {
     caseId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type SkinUncheckedUpdateManyInput = {
+  export type skinUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     rarity?: StringFieldUpdateOperationsInput | string
@@ -3199,17 +3199,17 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type CaseCountOrderByAggregateInput = {
+  export type casesCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
   }
 
-  export type CaseMaxOrderByAggregateInput = {
+  export type casesMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
   }
 
-  export type CaseMinOrderByAggregateInput = {
+  export type casesMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
   }
@@ -3252,7 +3252,7 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type SkinCountOrderByAggregateInput = {
+  export type skinCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     rarity?: SortOrder
@@ -3260,7 +3260,7 @@ export namespace Prisma {
     caseId?: SortOrder
   }
 
-  export type SkinMaxOrderByAggregateInput = {
+  export type skinMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     rarity?: SortOrder
@@ -3268,7 +3268,7 @@ export namespace Prisma {
     caseId?: SortOrder
   }
 
-  export type SkinMinOrderByAggregateInput = {
+  export type skinMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     rarity?: SortOrder
